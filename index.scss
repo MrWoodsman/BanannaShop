@@ -39,7 +39,7 @@ body {
     // position: fixed;
     position: sticky;
     z-index: 100;
-    width: calc(100vw - 17px);
+    width: 100vw;
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -81,7 +81,7 @@ body {
 }
 
 #welcome_view {
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 800px;
     background: url('BANANAS BACKGROUND.png');
     background-position: center 0%;
@@ -344,7 +344,7 @@ body {
 }
 
 #footer {
-    width: calc(100vw - 20px);
+    width: 100vw;
     height: 200px;
     display: flex;
     justify-content: center;
@@ -360,6 +360,9 @@ body {
     body {
         font-size: 5px;
         --padding: 10px;
+    }
+    #space {
+        height: 40px;
     }
     #logo {
         height: 60%;
