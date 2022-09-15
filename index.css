@@ -1,0 +1,505 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  overflow-x: hidden;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 10px;
+  background: var(--color5);
+  --padding: 200px;
+}
+
+@media only screen and (max-width: 1400px) {
+  body {
+    font-size: 7.5px;
+    --padding: 100px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  body {
+    font-size: 5px;
+    --padding: 50px;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #D6D6D6;
+  --color2: #FFEE32;
+  --color3: #FFD100;
+  --color4: #202020;
+  --color5: #333533;
+}
+
+#menu_navigation {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  z-index: 100;
+  width: calc(100vw - 17px);
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding);
+  background: var(--color2);
+}
+#menu_navigation .left {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  height: 100%;
+}
+#menu_navigation .right {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-start;
+}
+#menu_navigation .right .menu {
+  display: flex;
+  gap: 32px;
+}
+#menu_navigation .right a {
+  font-family: "Inter";
+  text-decoration: none;
+  font-size: 2.4em;
+  font-weight: 500;
+  color: var(--color4);
+}
+#menu_navigation .right .buy {
+  background-color: var(--color4);
+  padding: 8px 24px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 2.4em;
+}
+
+#welcome_view {
+  width: calc(100vw - 20px);
+  height: 800px;
+  background: url("BANANAS BACKGROUND.png");
+  background-position: center 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#welcome_view .welcome_text {
+  font-size: 5em;
+  color: var(--color2);
+  text-shadow: 0px 80px 80px rgba(0, 0, 0, 0.51), 0px 24.1177px 24.1177px rgba(0, 0, 0, 0.31505), 0px 10.0172px 10.0172px rgba(0, 0, 0, 0.238381), 0px 3.62304px 3.62304px rgba(0, 0, 0, 0.169582);
+}
+#welcome_view .welcome_text .color {
+  color: var(--color1);
+}
+#welcome_view img {
+  filter: drop-shadow(0px 85px 82px rgba(205, 190, 65, 0.15)) drop-shadow(0px 37.552px 32.0397px rgba(205, 190, 65, 0.120757)) drop-shadow(0px 23.1987px 15.6373px rgba(205, 190, 65, 0.11679)) drop-shadow(0px 15.3713px 7.809px rgba(205, 190, 65, 0.113881)) drop-shadow(0px 9.64321px 3.5731px rgba(205, 190, 65, 0.105604)) drop-shadow(0px 4.69266px 1.22549px rgba(205, 190, 65, 0.0829605));
+}
+
+#products_view {
+  position: relative;
+  height: 900px;
+  width: 100%;
+  background: var(--color2);
+  padding: 0 var(--padding);
+}
+#products_view .bg {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("BANANAS BACKGROUND2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+#products_view .content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+#products_view .content h1 {
+  color: var(--color4);
+  font-size: 6.5em;
+  font-weight: 700;
+}
+#products_view .content h1 .bold {
+  font-weight: 900;
+}
+#products_view .content .gallery {
+  width: 450px;
+  aspect-ratio: 1;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-template-rows: repeat(2, minmax(150px, 1fr));
+  filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.24)) drop-shadow(0px 41.7776px 33.4221px rgba(0, 0, 0, 0.172525)) drop-shadow(0px 22.3363px 17.869px rgba(0, 0, 0, 0.143066)) drop-shadow(0px 12.5216px 10.0172px rgba(0, 0, 0, 0.12)) drop-shadow(0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0969343)) drop-shadow(0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0674749));
+}
+#products_view .content .gallery .galery_element {
+  background: orange;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#opinion_view {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 75px var(--padding);
+  background: url("BANANAS BACKGROUND.png");
+  background-position: center 0%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#opinion_view .text {
+  color: #FFFFFF;
+  font-size: 6.5em;
+  width: 100%;
+  filter: drop-shadow(0px 56px 80px rgba(0, 0, 0, 0.48)) drop-shadow(0px 23.3955px 33.4221px rgba(0, 0, 0, 0.34505)) drop-shadow(0px 12.5083px 17.869px rgba(0, 0, 0, 0.286131)) drop-shadow(0px 7.01207px 10.0172px rgba(0, 0, 0, 0.24)) drop-shadow(0px 3.72406px 5.32008px rgba(0, 0, 0, 0.193869)) drop-shadow(0px 1.54966px 2.21381px rgba(0, 0, 0, 0.13495));
+}
+#opinion_view #list_opinions {
+  width: calc(100% + 400px);
+  height: 100%;
+  margin: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+#opinion_view #list_opinions .card {
+  max-width: 422px;
+  max-height: 238px;
+  background: var(--color4);
+  padding: 16px 32px;
+  border: 3px solid var(--color2);
+  box-shadow: 0px 100px 80px rgba(32, 32, 32, 0.35), 0px 41.7776px 33.4221px rgba(32, 32, 32, 0.251599), 0px 22.3363px 17.869px rgba(32, 32, 32, 0.208638), 0px 12.5216px 10.0172px rgba(32, 32, 32, 0.175), 0px 6.6501px 5.32008px rgba(32, 32, 32, 0.141362), 0px 2.76726px 2.21381px rgba(32, 32, 32, 0.098401);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  border-radius: 16px;
+}
+#opinion_view #list_opinions .card .first_lane {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 10px;
+}
+#opinion_view #list_opinions .card .first_lane i {
+  color: var(--color2);
+  font-size: 4em;
+}
+#opinion_view #list_opinions .card .first_lane h1 {
+  color: var(--color2);
+  font-weight: 700;
+  font-size: 2.6em;
+  margin: 0;
+}
+#opinion_view #list_opinions .card p {
+  margin: 0;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--color1);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#faq_view {
+  position: relative;
+  height: 900px;
+  width: 100%;
+  background: var(--color2);
+  padding: 0 var(--padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#faq_view .bg {
+  left: 0;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("BANANAS BACKGROUND2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+#faq_view .box {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 25px;
+}
+#faq_view .box h1 {
+  font-size: 4.8em;
+  font-weight: 700;
+  color: var(--color4);
+  margin: 0;
+}
+#faq_view .box h2 {
+  font-size: 3.6em;
+  font-weight: 700;
+  color: var(--color4);
+  margin: 0;
+}
+#faq_view .box .bold {
+  font-weight: 900;
+}
+#faq_view .box .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+}
+#faq_view .box .column .card_faq {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 32px;
+  gap: 10px;
+  width: 437px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #202020;
+  box-shadow: 0px 22px 80px rgba(0, 0, 0, 0.33), 0px 9.46484px 33.4221px rgba(0, 0, 0, 0.237222), 0px 6.28075px 17.869px rgba(0, 0, 0, 0.196715), 0px 4.42582px 10.0172px rgba(0, 0, 0, 0.165), 0px 2.89699px 5.32008px rgba(0, 0, 0, 0.133285), 0px 1.44947px 2.21381px rgba(0, 0, 0, 0.092778);
+  border-radius: 16px;
+  transition: 100ms height;
+}
+#faq_view .box .column .card_faq .click {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+}
+#faq_view .box .column .card_faq .first {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#faq_view .box .column .card_faq .first h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2em;
+  color: var(--color1);
+}
+#faq_view .box .column .card_faq .first i {
+  color: var(--color1);
+  font-size: 2em;
+}
+#faq_view .box .column .card_faq .second {
+  display: none;
+  align-items: flex-start;
+  padding: 16px 8px;
+}
+#faq_view .box .column .card_faq .second p {
+  font-weight: 400;
+  font-size: 1.4em;
+  color: var(--color1);
+  margin: 0;
+}
+
+.open i {
+  transform: rotate(180deg);
+}
+.open .second {
+  display: flex !important;
+}
+
+#footer {
+  width: calc(100vw - 20px);
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: var(--color5);
+}
+#footer img {
+  height: 30%;
+}
+
+@media only screen and (max-width: 850px) {
+  body {
+    font-size: 5px;
+    --padding: 10px;
+  }
+  #logo {
+    height: 60%;
+  }
+  #menu_navigation {
+    height: 75px;
+    justify-content: start;
+  }
+  #menu_navigation .left {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    height: 100%;
+  }
+  #menu_navigation .right {
+    display: none;
+    gap: 32px;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  #menu_navigation .right .menu {
+    display: flex;
+    gap: 16px;
+  }
+  #menu_navigation .right a {
+    font-family: "Inter";
+    text-decoration: none;
+    font-size: 2.4em;
+    font-weight: 500;
+    color: var(--color4);
+  }
+  #menu_navigation .right .buy {
+    background-color: var(--color4);
+    padding: 8px 24px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    font-weight: 800;
+    font-size: 2.4em;
+  }
+  #welcome_view {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 150px var(--padding);
+  }
+  #welcome_view img {
+    width: 80%;
+    min-width: 100px;
+    max-width: 400px;
+  }
+  #products_view {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #products_view .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 50px var(--padding) 150px;
+  }
+  #products_view .content .gallery {
+    width: 80%;
+    grid-template-columns: repeat(2, minmax(75px, 1fr));
+    grid-template-rows: repeat(2, minmax(75px, 1fr));
+  }
+  #opinion_view {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 75px var(--padding) 200px;
+  }
+  #opinion_view .text {
+    text-align: center;
+  }
+  #opinion_view #list_opinions {
+    width: 100vw;
+    max-width: 450px;
+    margin: 64px 0 0 0;
+  }
+  #opinion_view #list_opinions .card {
+    padding: 8px 16px;
+    border-radius: 8px;
+  }
+  #opinion_view #list_opinions .card:nth-child(1) {
+    display: none;
+  }
+  #opinion_view #list_opinions .card:nth-child(3) {
+    display: none;
+  }
+  #faq_view {
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 150px var(--padding);
+  }
+  #faq_view .box {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+  }
+  #faq_view .box .column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+    gap: 10px;
+  }
+  #faq_view .box .column .card_faq {
+    width: 100%;
+  }
+  #faq_view .box .column .card_faq .first h1 {
+    font-size: 3em;
+  }
+  #faq_view .box .column .card_faq .first i {
+    font-size: 2.5em;
+  }
+  #faq_view .box .column .card_faq .second p {
+    font-size: 2.25em;
+  }
+  #footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: var(--color5);
+  }
+  #footer img {
+    height: 75%;
+  }
+}/*# sourceMappingURL=index.css.map */
